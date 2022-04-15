@@ -5,9 +5,9 @@ const Manager = require("../lib/Manager");
 test("create a new manager", () => {
   const manager = new Manager("Big Bossman", 999, "bigbossman@email.com", 999);
 
-  expect(manager.name).toEqual(expact.any(String));
-  expect(manager.id).toEqual(expact.any(Number));
-  expect(manager.email).toEqual(expact.any(String));
-  expect(manager.officenumber).toEqual(expact.any(Number));
+  expect(manager.name).toEqual(expect.any(String));
+  expect(manager.id).toEqual(expect.any(Number));
+  expect(manager.email).toEqual(expect.any(String));
+  expect(manager.officeNumber).toEqual(expect.any(Number));
 
 });
