@@ -1,0 +1,27 @@
+{
+  "name": "team-portfolio-generator",
+  "version": "1.0.0",
+  "description": "Team Portfolio Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobpruz/team-portfolio-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobpruz/team-portfolio-generator/issues"
+  },
+  "homepage": "https://github.com/bobpruz/team-portfolio-generator#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.2",
+    "jest": "^27.5.1"
+  }
+}
