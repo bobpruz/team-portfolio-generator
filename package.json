@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/bobpruz/team-portfolio-generator#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.2",
     "jest": "^27.5.1"
   }
 }
