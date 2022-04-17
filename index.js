@@ -185,3 +185,44 @@ const addEmployee = () => {
     })
 
 };
+
+// write html to file
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        // if there is an error 
+        if (err) {
+            console.log(err);
+            return;
+        // when the profile has been created 
+        } else {
+            console.log("Your team profile has been successfully created! Please check out the index.html")
+        }
+    })
+}; 
+
+// copy css to dist file
+const copyFile = () => {
+    fs.copyFile('./src/style.css', './dist/style.css', (err) => {
+        if(err) {
+            console.log(err)
+        }
+        else {
+            console.log('style.css copied')
+        }
+    })
+}
+
+
+// run application
+addManager()
+    .then(addEmployee)
+    .then(teamArray => {
+        return genHTML(teamArray)
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+      })
+      .then(copyFile)
+      .catch(err => {
+     console.log(err);
+      });
