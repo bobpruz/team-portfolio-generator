@@ -1,8 +1,8 @@
 // generate Manager
 const genManager = function (manager) {
   return `
-    <div class="col-12 mt-4">
-        <div class="card h-100 w-75">
+    <div class="col-md-8 col-12 mt-4 mx-1">
+        <div class="card h-100">
             <div class="card-header">
                 <h4>${manager.name}</h4>
                 <h3>Manager</h3>
