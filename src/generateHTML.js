@@ -1,8 +1,8 @@
 // generate Manager
 const genManager = function (manager) {
   return `
-    <div class="col-4 mt-4">
-        <div class="card h-100">
+    <div class="col-12 mt-4">
+        <div class="card h-100 w-75">
             <div class="card-header">
                 <h4>${manager.name}</h4>
                 <h3>Manager</h3>
@@ -20,11 +20,11 @@ const genManager = function (manager) {
 //  generate Engineer
 const genEngineer = function (engineer) {
   return `
-    <div class="col-4 mt-4">
+    <div class="col-md-6 col-12 mt-4">
         <div class="card h-100">
             <div class="card-header">
                 <h4>${engineer.name}</h4>
-                <h3>Manager</h3>
+                <h3>Engineer</h3>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
@@ -39,11 +39,11 @@ const genEngineer = function (engineer) {
 //  generate Engineer
 const genIntern = function (intern) {
   return `
-      <div class="col-4 mt-4">
+      <div class="col-md-6 col-12 mt-4">
           <div class="card h-100">
               <div class="card-header">
                   <h4>${intern.name}</h4>
-                  <h3>Manager</h3>
+                  <h3>Intern</h3>
               </div>
               <div class="card-body">
                   <p class="id">ID: ${intern.id}</p>
@@ -60,8 +60,8 @@ const genIntern = function (intern) {
 genHTML = (data) => {
   htmlArray = [];
 
-  data.forEach((element) => {
-    const employee = data;
+  for (let i = 0; i < data.length; i++) {
+    const employee = data[i];
     const role = employee.getRole();
 
     // create manager card
@@ -84,14 +84,14 @@ genHTML = (data) => {
 
       htmlArray.push(internCard);
     }
-  });
+  };
 
  // join the strings together   
   const teamCards = htmlArray.join("");
 
   // return page
 const createPage = genPage(teamCards);
-return genPage;
+return createPage;
 
 };
 
